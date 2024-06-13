@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    LinearLayout del diseño total del inicio de la app
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        xmlns:app="http://schemas.android.com/apk/res-auto" -> importa las configuraciones de app para Android Studio
+        android:layout_width -> ancho del elemento
+        android:layout_height -> alto del elemento
+        android:background -> color del fondo del diseño
+        android:orientation -> orientación de el elemento
+
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoventanasiniciales"
+    android:orientation="vertical">
+
+    <!--    LinearLayout que contiene la imagen del logo
+
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_margin -> margen total del elemento
+            android:layout_gravity -> gravedad del Linear del elemento
+            android:orientation -> orientación de el elemento
+
+    -->
+
+    <LinearLayout
+        android:layout_width="325dp"
+        android:layout_height="260dp"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!--    ImageView de la imagen del logo de la app
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_margin -> margen total del elemento
+                android:layout_gravity -> gravedad del elemento
+                android:padding -> espaciado del elemento
+                android:background -> fondo de borde del elemento
+                android:src -> inserccion de imagen
+
+        -->
+
+        <ImageView
+            android:id="@+id/imageViewLogoInicio"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_margin="25dp"
+            android:layout_gravity="center"
+            android:padding="30dp"
+            android:background="@drawable/roundcorner"
+            android:src="@drawable/logo"/>
+    </LinearLayout>
+
+    <!--    LinearLayout que contiene los botones para ir a registrarse o iniciar sesion
+
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_marginTop -> margen superior del elemento
+            android:layout_marginBottom -> margen inferior del elemento
+            android:layout_gravity -> gravedad del elemento
+            android:orientation -> orientación de el elemento
+
+    -->
+
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="65dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!--    Button para ir al registro del usuario
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_marginTop -> margen superior del elemento
+                android:layout_marginStart -> margen izquierdo del elemento
+                android:text -> texto que se muestra
+                android:padding -> espaciado del elemento
+                app:backgroundTint -> color de fondo del elemento
+                app:cornerRadius -> radio del borde del elemento
+
+        -->
+
+        <Button
+            android:id="@+id/buttonRegistrarInicio"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/registrar"
+            android:padding="20dp"
+            app:backgroundTint="@color/colorBotonesLogin"
+            app:cornerRadius="15dp"/>
+
+        <!--    Button para iniciar sesion con el usuario
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_marginTop -> margen superior del elemento
+                android:layout_marginStart -> margen izquierdo del elemento
+                android:text -> texto que se muestra
+                android:padding -> espaciado del elemento
+                app:backgroundTint -> color de fondo del elemento
+                app:cornerRadius -> radio del borde del elemento
+
+        -->
+
+        <Button
+            android:id="@+id/buttonInicioSesionInicio"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/inicioSesion"
+            android:padding="20dp"
+            app:backgroundTint="@color/colorBotonesLogin"
+            app:cornerRadius="15dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--    RelativeLayout del diseño total del registro de la app
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        xmlns:app="http://schemas.android.com/apk/res-auto" -> importa las configuraciones de app para Android Studio
+        android:layout_width -> ancho del elemento
+        android:layout_height -> alto del elemento
+
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    Toolbar superior del juego principal
+
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_alignParentTop -> alineado a la parte superior de la vista
+            android:background -> color de fondo del elemento
+            android:elevation -> elevacion del elemento
+
+    -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/background"
+        android:elevation="4dp">
+
+        <!--    LinearLayout del contador del material de la madera del juego principal
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:gravity -> gravedad del Linear del elemento
+                android:layout_marginEnd -> margen derecho del elemento
+                android:background -> color del fondo del diseño
+                android:orientation -> orientación de el elemento
+
+        -->
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <!--    ImageView de la imagen del contador del material de la madera
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:src -> inserccion de imagen
+
+            -->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconomaterialmadera"/>
+
+            <!--    TextView del contador del material de la madera
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:text -> texto del elemento
+                    android:textAlignment -> alineado del texto del elemento
+                    android:textColor -> color del texto del elemento
+                    android:textSize -> tamaño del texto del elemento
+                    android:gravity -> gravedad del texto del elemento
+
+            -->
+
+            <TextView
+                android:id="@+id/textViewMaderaIncr"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="@string/madera"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!--    LinearLayout del contador del material de la piedra del juego principal
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:gravity -> gravedad del Linear del elemento
+                android:layout_marginEnd -> margen derecho del elemento
+                android:background -> color del fondo del diseño
+                android:orientation -> orientación de el elemento
+
+        -->
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <!--    ImageView de la imagen del contador del material de la piedra
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:src -> inserccion de imagen
+
+            -->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconomaterialpiedra"/>
+
+            <!--    TextView del contador del material de la piedra
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:text -> texto del elemento
+                    android:textAlignment -> alineado del texto del elemento
+                    android:textColor -> color del texto del elemento
+                    android:textSize -> tamaño del texto del elemento
+                    android:gravity -> gravedad del texto del elemento
+
+            -->
+
+            <TextView
+                android:id="@+id/textViewPiedraIncr"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="@string/piedra"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!--    LinearLayout del contador del material del hierro del juego principal
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:gravity -> gravedad del Linear del elemento
+                android:layout_marginEnd -> margen derecho del elemento
+                android:background -> color del fondo del diseño
+                android:orientation -> orientación de el elemento
+
+        -->
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <!--    ImageView de la imagen del contador del material del hierro
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:src -> inserccion de imagen
+
+            -->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconomaterialhierro"/>
+
+            <!--    TextView del contador del material del hierro
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:text -> texto del elemento
+                    android:textAlignment -> alineado del texto del elemento
+                    android:textColor -> color del texto del elemento
+                    android:textSize -> tamaño del texto del elemento
+                    android:gravity -> gravedad del texto del elemento
+
+            -->
+
+            <TextView
+                android:id="@+id/textViewHierroIncr"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="@string/hierro"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!--    LinearLayout del contador del material del oro del juego principal
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:gravity -> gravedad del Linear del elemento
+                android:layout_marginEnd -> margen derecho del elemento
+                android:background -> color del fondo del diseño
+                android:orientation -> orientación de el elemento
+
+        -->
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <!--    ImageView de la imagen del contador del material del oro
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:src -> inserccion de imagen
+
+            -->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconomaterialoro"/>
+
+            <!--    TextView del contador del material del oro
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:text -> texto del elemento
+                    android:textAlignment -> alineado del texto del elemento
+                    android:textColor -> color del texto del elemento
+                    android:textSize -> tamaño del texto del elemento
+                    android:gravity -> gravedad del texto del elemento
+
+            -->
+
+            <TextView
+                android:id="@+id/textViewOroIncr"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="@string/oro"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!--    ImageButton de la imagen para mostrar el menu de opciones del juego principal
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:contentDescription -> texto descriptivo del elemento
+                android:backgroundTint -> color del fondo de la imagen
+                android:background -> fondo del borde del elemento
+                android:scaleType -> escalado del elemento
+                app:srcCompat -> inserccion de imagen
+
+        -->
+
+        <ImageButton
+            android:id="@+id/imageButtonEngranaje"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/textoImageButton"
+            android:backgroundTint="@color/backgroundSplash"
+            android:background="@drawable/roundcorner"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/iconoengranaje" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--    LinearLayout del contador del material de la madera del juego principal
+
+            android:id -> id de referencia
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:gravity -> gravedad del Linear del elemento
+            android:layout_alignParentEnd -> alineado a la parte derecha de la vista
+            android:layout_margin -> margen total del elemento
+            android:orientation -> orientación de el elemento
+            android:visibility -> visibilidad del elemento
+            android:background -> color del fondo del diseño
+            android:elevation -> elevacion del elemento
+
+    -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenuOpciones"
+        android:layout_width="225dp"
+        android:layout_height="175dp"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/border_linear"
+        android:elevation="4dp">
+
+        <!--    Button para guardar la partida
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_gravity -> gravedad del elemento
+                android:layout_margin -> margen total del elemento
+                android:text -> texto que se muestra
+                app:backgroundTint -> color de fondo del elemento
+                app:cornerRadius -> radio del borde del elemento
+
+        -->
+
+        <Button
+            android:id="@+id/buttonGuardar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="@string/guardarP"
+            app:backgroundTint="@color/colorBotonesLogin"
+            app:cornerRadius="15dp" />
+
+        <!--    Button para salir la partida
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_gravity -> gravedad del elemento
+                android:layout_margin -> margen total del elemento
+                android:text -> texto que se muestra
+                app:backgroundTint -> color de fondo del elemento
+                app:cornerRadius -> radio del borde del elemento
+
+        -->
+
+        <Button
+            android:id="@+id/buttonSalir"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="@string/salirP"
+            app:backgroundTint="@color/colorBotonesLogin"
+            app:cornerRadius="15dp" />
+
+        <!--    Button para cancelar el despliegue del menu de opciones
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_gravity -> gravedad del elemento
+                android:layout_margin -> margen total del elemento
+                android:text -> texto que se muestra
+                app:backgroundTint -> color de fondo del elemento
+                app:cornerRadius -> radio del borde del elemento
+
+        -->
+
+        <Button
+            android:id="@+id/buttonCancelarPartida"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="@string/cancelarP"
+            app:backgroundTint="@color/colorBotonesLogin"
+            app:cornerRadius="15dp" />
+    </LinearLayout>
+
+    <!--    FrameLayout que contiene el diseño del juego principal
+
+            android:id -> id de referencia
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+
+    -->
+
+    <FrameLayout
+        android:id="@+id/frameLayoutJuego"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    SurfaceView que contiene la logica del juego principal
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+
+        -->
+
+        <SurfaceView
+            android:id="@+id/surfaceViewJuego"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <!--    Toolbar inferior del juego principal
+
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_alignParentBottom -> alineado a la parte inferior de la vista
+            android:background -> color de fondo del elemento
+            android:elevation -> elevacion del elemento
+
+    -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background"
+        android:elevation="4dp">
+
+        <!--    LinearLayout que contiene los ImageButton para el manejo del juego principal
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:gravity -> gravedad del Linear del elemento
+                android:background -> color del fondo del diseño
+
+        -->
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/border">
+
+            <!--    ImageButton de la imagen para demoler los edificios o carreteras del juego principal
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_marginEnd -> margen derecho del elemento
+                    android:contentDescription -> texto descriptivo del elemento
+                    android:backgroundTint -> color del fondo de la imagen
+                    android:background -> fondo del elemento
+                    android:scaleType -> escalado del elemento
+                    app:srcCompat -> inserccion de imagen
+
+            -->
+
+            <ImageButton
+                android:id="@+id/imageButtonDemoler"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="80dp"
+                android:contentDescription="@string/textoImageButton"
+                android:backgroundTint="@color/backgroundSplash"
+                android:background="@drawable/roundcorner"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/iconodemoler"/>
+
+            <!--    ImageButton de la imagen para construir los edificios del juego principal
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_marginEnd -> margen derecho del elemento
+                    android:contentDescription -> texto descriptivo del elemento
+                    android:backgroundTint -> color del fondo de la imagen
+                    android:background -> fondo del elemento
+                    android:scaleType -> escalado del elemento
+                    app:srcCompat -> inserccion de imagen
+
+            -->
+
+            <ImageButton
+                android:id="@+id/imageButtonEdificios"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="80dp"
+                android:contentDescription="@string/textoImageButton"
+                android:backgroundTint="@color/backgroundSplash"
+                android:background="@drawable/roundcorner"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/iconoedificios"/>
+
+            <!--    ImageButton de la imagen para construir las carreteras del juego principal
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_marginEnd -> margen derecho del elemento
+                    android:contentDescription -> texto descriptivo del elemento
+                    android:backgroundTint -> color del fondo de la imagen
+                    android:background -> fondo del elemento
+                    android:scaleType -> escalado del elemento
+                    app:srcCompat -> inserccion de imagen
+
+            -->
+
+            <ImageButton
+                android:id="@+id/imageButtonCarreteras"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/textoImageButton"
+                android:backgroundTint="@color/backgroundSplash"
+                android:background="@drawable/roundcorner"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/iconocarreteras"/>
+        </LinearLayout>
+
+        <!--    LinearLayout que contiene la imagen y el contador de la poblacion del juego principal
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_marginStart -> margen izquierdo del elemento
+                android:gravity -> gravedad del Linear del elemento
+                android:background -> color del fondo del diseño
+
+        -->
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:gravity="center"
+            android:background="@drawable/border">
+
+            <!--    ImageView de la imagen del contador de la poblacion
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:src -> inserccion de imagen
+
+            -->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconopoblacion"/>
+
+            <!--    TextView del contador de la poblacion
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:text -> texto del elemento
+                    android:textAlignment -> alineado del texto del elemento
+                    android:textColor -> color del texto del elemento
+                    android:textSize -> tamaño del texto del elemento
+                    android:gravity -> gravedad del texto del elemento
+
+            -->
+
+            <TextView
+                android:id="@+id/textViewPoblacion"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:text="@string/poblacion"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!--    LinearLayout que contiene la imagen y el reloj del juego principal
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:gravity -> gravedad del Linear del elemento
+                android:background -> color del fondo del diseño
+
+        -->
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="35dp"
+            android:gravity="center"
+            android:background="@drawable/border">
+
+            <!--    ImageView de la imagen del reloj
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:src -> inserccion de imagen
+
+            -->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconotiempojuego"/>
+
+            <!--    TextView del reloj
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:text -> texto del elemento
+                    android:textAlignment -> alineado del texto del elemento
+                    android:textColor -> color del texto del elemento
+                    android:textSize -> tamaño del texto del elemento
+                    android:gravity -> gravedad del texto del elemento
+
+            -->
+
+            <TextView
+                android:id="@+id/textViewTemporizador"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:text="@string/temporizador"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    LinearLayout del diseño total del login de la app
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        xmlns:app="http://schemas.android.com/apk/res-auto" -> importa las configuraciones de app para Android Studio
+        xmlns:tools="http://schemas.android.com/tools" -> importa las configuraciones de tools para Android Studio
+        xmlns:card_view="http://schemas.android.com/apk/res-auto" -> importa las configuraciones de card_view para Android Studio
+        android:layout_width -> ancho del elemento
+        android:layout_height -> alto del elemento
+        android:background -> color del fondo del diseño
+        android:orientation -> orientación de el elemento
+
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoventanasiniciales"
+    android:orientation="vertical">
+
+    <!--    CardView del diseño del layout que contiene el login de la app
+
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_margin -> margen total del elemento
+            android:orientation -> orientación de el elemento
+            card_view:cardCornerRadius -> redondeo del borde del CardView
+
+    -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        card_view:cardCornerRadius="10dp">
+
+        <!--    LinearLayout del diseño que contiene el login de la app
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:background -> color del fondo del diseño
+                android:orientation -> orientación de el elemento
+
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+
+            <!--    LinearLayout que contiene la imagen del logo y el mensaje de bienvenida del jugador
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_margin -> margen total del elemento
+                    android:orientation -> orientación de el elemento
+
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <!--    ImageView de la imagen del logo de la app
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:src -> inserccion de imagen
+
+                -->
+
+                <ImageView
+                    android:id="@+id/imageViewLogoRegistro"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo"/>
+
+                <!--    TextView del mensaje de bienvenida del jugador
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_marginStart -> margen izquierdo del elemento
+                        android:layout_marginEnd -> margen derecho del elemento
+                        android:text -> texto del elemento
+                        android:textAlignment -> alineamiento del texto del elemento
+                        android:textColor -> color del texto del elemento
+                        android:textSize -> tamaño del texto del elemento
+                        android:gravity -> gravedad del texto del elemento
+
+                -->
+
+                <TextView
+                    android:id="@+id/textViewTextoLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/textoLogin"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!--    LinearLayout que contiene la imagen del E-mail y el campo del E-mail
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_margin -> margen total del elemento
+                    android:layout_gravity -> gravedad del elemento
+                    android:orientation -> orientación de el elemento
+
+            -->
+
+            <LinearLayout
+                android:layout_width="335dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <!--    ImageView de la imagen del E-mail
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:src -> inserccion de imagen
+
+                -->
+
+                <ImageView
+                    android:id="@+id/imageViewIconoEmail"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iconoemail"/>
+
+                <!--    EditText para introducir el campo del E-mail
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:layout_marginTop -> margen superior del elemento
+                        android:layout_marginEnd -> margen derecho del elemento
+                        android:layout_marginBottom -> margen inferior del elemento
+                        android:hint -> texto que se muestra, pero que desaparece cuando escribes
+                        android:inputType -> tipo de texto que se introduce
+                        android:textColorHint -> color del texto para saber que escribir en el elemento
+                        android:textColor -> color del texto por defecto, que desaparece al escribir
+                        android:backgroundTint -> color de la línea inferior del campo
+                        tools:ignore -> ignora errores que no afectan a la ejecución
+
+                -->
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="225dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:hint="@string/email"
+                    android:inputType="text"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    tools:ignore="TextFields,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!--    LinearLayout que contiene la imagen de la contraseña y el campo de la contraseña
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_margin -> margen total del elemento
+                    android:layout_gravity -> gravedad del elemento
+                    android:orientation -> orientación de el elemento
+
+            -->
+
+            <LinearLayout
+                android:layout_width="335dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <!--    ImageView de la imagen de la contraseña
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:src -> inserccion de imagen
+
+                -->
+
+                <ImageView
+                    android:id="@+id/imageViewIconoContrasena"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iconocontrasena"/>
+
+                <!--    EditText para introducir el campo de la contraseña
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:layout_marginTop -> margen superior del elemento
+                        android:layout_marginBottom -> margen inferior del elemento
+                        android:hint -> texto que se muestra, pero que desaparece cuando escribes
+                        android:inputType -> tipo de texto que se introduce
+                        android:textColorHint -> color del texto para saber que escribir en el elemento
+                        android:textColor -> color del texto por defecto, que desaparece al escribir                        android:backgroundTint -> color de la línea inferior del campo
+                        tools:ignore -> ignora errores que no afectan a la ejecución
+
+                -->
+
+                <EditText
+                    android:id="@+id/editTextContrasenaRegistro"
+                    android:layout_width="185dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:hint="@string/contrasena"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <!--    ImageButton de la imagen para mostrar la contraseña del login del campo de al lado
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_marginStart -> margen izquierdo del elemento
+                        android:layout_marginTop -> margen superior del elemento
+                        android:padding -> espaciado del elemento
+                        android:contentDescription -> texto descriptivo del elemento
+                        android:background -> fondo de borde del ojo del elemento
+                        android:scaleType -> escalado del elemento
+                        app:srcCompat -> inserccion de imagen
+
+                -->
+
+                <ImageButton
+                    android:id="@+id/imageButtonOjoConContrasenaLogin"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="16dp"
+                    android:padding="6dp"
+                    android:contentDescription="@string/textoImageButton"
+                    android:background="@drawable/roundcorner_ojo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/iconoojocontrasena"/>
+            </LinearLayout>
+
+            <!--    LinearLayout que contiene los botones para cancelar el inicio de sesion o iniciar sesion
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_marginStart -> margen izquierdo del elemento
+                    android:layout_marginEnd -> margen derecho del elemento
+                    android:layout_marginBottom -> margen inferior del elemento
+                    android:layout_gravity -> gravedad del elemento
+                    android:orientation -> orientación de el elemento
+
+            -->
+
+            <LinearLayout
+                android:layout_width="315dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <!--    Button para cancelar el inicio de sesion
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_marginTop -> margen superior del elemento
+                        android:layout_marginStart -> margen izquierdo del elemento
+                        android:text -> texto que se muestra
+                        android:padding -> espaciado del elemento
+                        app:backgroundTint -> color de fondo del elemento
+                        app:cornerRadius -> radio del borde del elemento
+
+                -->
+
+                <Button
+                    android:id="@+id/buttonCancelar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/cancelar"
+                    android:padding="20dp"
+                    app:backgroundTint="@color/colorBotonesLogin"
+                    app:cornerRadius="15dp"/>
+
+                <!--    Button para iniciar sesion con el usuario
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_marginTop -> margen superior del elemento
+                        android:layout_marginStart -> margen izquierdo del elemento
+                        android:text -> texto que se muestra
+                        android:padding -> espaciado del elemento
+                        app:backgroundTint -> color de fondo del elemento
+                        app:cornerRadius -> radio del borde del elemento
+
+                -->
+
+                <Button
+                    android:id="@+id/buttonInicioSesion"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/inicioSesion"
+                    android:padding="20dp"
+                    app:backgroundTint="@color/colorBotonesLogin"
+                    app:cornerRadius="15dp"/>
+            </LinearLayout>
+
+            <!--    SignInButton para iniciar sesion con Google
+
+                    android:id -> id de referencia
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_gravity -> gravedad del elemento
+
+            -->
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/signInButtonGoogle"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

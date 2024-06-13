@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    LinearLayout del diseño total de la seleccion de partida de la app
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        xmlns:app="http://schemas.android.com/apk/res-auto" -> importa las configuraciones de app para Android Studio
+        android:layout_width -> ancho del elemento
+        android:layout_height -> alto del elemento
+        android:background -> color del fondo del diseño
+        android:orientation -> orientación de el elemento
+
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoventanasiniciales"
+    android:orientation="vertical">
+
+    <!--    CardView del diseño del layout que contiene la seleccion de partida de la app
+
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_marginTop -> margen superior del elemento
+            android:layout_gravity -> gravedad del elemento
+            app:cardCornerRadius -> borde del elemento
+            android:background -> fondo del elemento
+
+    -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="342dp"
+        android:layout_height="560dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp"
+        android:background="@color/background">
+
+        <!--    LinearLayout del diseño que contiene la seleccion de partida de la app
+
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:background -> color del fondo del diseño
+                android:orientation -> orientación de el elemento
+
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <!--    LinearLayout del diseño que contiene el texto de opciones de la seleccion de partida
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_margin -> margen total del elemento
+                    android:layout_gravity -> gravedad del elemento
+                    android:orientation -> orientación de el elemento
+                    android:background -> color del fondo del diseño
+
+            -->
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <!--    TextView del texto de opciones de la seleccion de partida
+
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:gravity -> gravedad del texto del elemento
+                        android:layout_marginTop -> margen superior del elemento
+                        android:layout_marginBottom -> margen inferior del elemento
+                        android:text -> texto del elemento
+                        android:textColor -> color del texto del elemento
+                        android:textStyle -> estilo del texto del elemento
+                        android:textSize -> tamaño del texto del elemento
+
+                -->
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/p1Texto"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!--    View para separar los 2 primeros layout
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:background -> color del fondo de la linea
+                    android:layout_gravity -> gravedad del elemento
+                    android:layout_margin -> margen total del elemento
+
+            -->
+
+            <View
+                android:layout_width="280dp"
+                android:layout_height="3dp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"/>
+
+            <!--    TextView del texto de los recursos disponibles de la seleccion de partida
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_gravity -> gravedad del elemento
+                    android:gravity -> gravedad del texto del elemento
+                    android:layout_marginTop -> margen superior del elemento
+                    android:layout_marginBottom -> margen inferior del elemento
+                    android:text -> texto del elemento
+                    android:textColor -> color del texto del elemento
+                    android:textStyle -> estilo del texto del elemento
+                    android:textSize -> tamaño del texto del elemento
+
+            -->
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/recursos"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@drawable/border"/>
+
+            <!--    LinearLayout del material de la madera de la partida
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_marginStart -> margen izquierdo del elemento
+                    android:layout_marginTop -> margen superior del elemento
+                    android:gravity -> gravedad del Linear del elemento
+                    android:background -> color del fondo del diseño
+                    android:orientation -> orientación de el elemento
+
+            -->
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:orientation="horizontal">
+
+                <!--    ImageView de la imagen del material de la madera
+
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:src -> inserccion de imagen
+
+                -->
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iconomaterialmadera"/>
+
+                <!--    TextView del recurso actual del material de la madera
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:gravity -> gravedad del texto del elemento
+                        android:text -> texto del elemento
+                        android:textSize -> tamaño del texto del elemento
+                        android:textColor -> color del texto del elemento
+
+                -->
+
+                <TextView
+                    android:id="@+id/textViewMadera1"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/textoDefault"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!--    LinearLayout del material de la piedra de la partida
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_marginStart -> margen izquierdo del elemento
+                    android:layout_marginTop -> margen superior del elemento
+                    android:gravity -> gravedad del Linear del elemento
+                    android:background -> color del fondo del diseño
+                    android:orientation -> orientación de el elemento
+
+            -->
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:orientation="horizontal">
+
+                <!--    ImageView de la imagen del material de la piedra
+
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:src -> inserccion de imagen
+
+                -->
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iconomaterialpiedra"/>
+
+                <!--    TextView del recurso actual del material de la piedra
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:gravity -> gravedad del texto del elemento
+                        android:text -> texto del elemento
+                        android:textSize -> tamaño del texto del elemento
+                        android:textColor -> color del texto del elemento
+
+                -->
+
+                <TextView
+                    android:id="@+id/textViewPiedra1"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/textoDefault"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!--    LinearLayout del material del hierro de la partida
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_marginStart -> margen izquierdo del elemento
+                    android:layout_marginTop -> margen superior del elemento
+                    android:gravity -> gravedad del Linear del elemento
+                    android:background -> color del fondo del diseño
+                    android:orientation -> orientación de el elemento
+
+            -->
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:orientation="horizontal">
+
+                <!--    ImageView de la imagen del material del hierro
+
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:src -> inserccion de imagen
+
+                -->
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iconomaterialhierro"/>
+
+                <!--    TextView del recurso actual del material del hierro
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:gravity -> gravedad del texto del elemento
+                        android:text -> texto del elemento
+                        android:textSize -> tamaño del texto del elemento
+                        android:textColor -> color del texto del elemento
+
+                -->
+
+                <TextView
+                    android:id="@+id/textViewHierro1"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/textoDefault"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!--    LinearLayout del material del oro de la partida
+
+                    android:layout_width -> ancho del elemento
+                    android:layout_height -> alto del elemento
+                    android:layout_marginStart -> margen izquierdo del elemento
+                    android:layout_marginTop -> margen superior del elemento
+                    android:gravity -> gravedad del Linear del elemento
+                    android:background -> color del fondo del diseño
+                    android:orientation -> orientación de el elemento
+
+            -->
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:orientation="horizontal">
+
+                <!--    ImageView de la imagen del material del oro
+
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:src -> inserccion de imagen
+
+                -->
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iconomaterialoro"/>
+
+                <!--    TextView del recurso actual del material del oro
+
+                        android:id -> id de referencia
+                        android:layout_width -> ancho del elemento
+                        android:layout_height -> alto del elemento
+                        android:layout_margin -> margen total del elemento
+                        android:layout_gravity -> gravedad del elemento
+                        android:gravity -> gravedad del texto del elemento
+                        android:text -> texto del elemento
+                        android:textSize -> tamaño del texto del elemento
+                        android:textColor -> color del texto del elemento
+
+                -->
+
+                <TextView
+                    android:id="@+id/textViewOro1"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/textoDefault"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    LinearLayout que contiene los botones para crear, cargar o borrar la partida
+
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_margin -> margen total del elemento
+            android:layout_gravity -> gravedad del elemento
+            android:orientation -> orientación de el elemento
+
+    -->
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:layout_margin="25dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <!--    Button para crear la partida
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_marginTop -> margen superior del elemento
+                android:layout_marginStart -> margen izquierdo del elemento
+                android:text -> texto que se muestra
+                android:padding -> espaciado del elemento
+                app:backgroundTint -> color de fondo del elemento
+                app:cornerRadius -> radio del borde del elemento
+
+        -->
+
+        <Button
+            android:id="@+id/buttonCrear"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/crearP"
+            android:padding="17dp"
+            app:backgroundTint="@color/colorBotonesLogin"
+            app:cornerRadius="15dp" />
+
+        <!--    Button para cargar la partida
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_marginTop -> margen superior del elemento
+                android:layout_marginStart -> margen izquierdo del elemento
+                android:text -> texto que se muestra
+                android:padding -> espaciado del elemento
+                app:backgroundTint -> color de fondo del elemento
+                app:cornerRadius -> radio del borde del elemento
+
+        -->
+
+        <Button
+            android:id="@+id/buttonCargar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/cargarP"
+            android:padding="17dp"
+            app:backgroundTint="@color/colorBotonesLogin"
+            app:cornerRadius="15dp" />
+
+        <!--    Button para borrar la partida
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_marginTop -> margen superior del elemento
+                android:layout_marginStart -> margen izquierdo del elemento
+                android:text -> texto que se muestra
+                android:padding -> espaciado del elemento
+                app:backgroundTint -> color de fondo del elemento
+                app:cornerRadius -> radio del borde del elemento
+
+        -->
+
+        <Button
+            android:id="@+id/buttonBorrar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/borrarP"
+            android:padding="17dp"
+            app:backgroundTint="@color/colorBotonesLogin"
+            app:cornerRadius="15dp" />
+    </LinearLayout>
+</LinearLayout>

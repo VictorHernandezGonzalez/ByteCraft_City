@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    Radio del borde de los ojos con contraseña de los layout
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        android:shape -> forma del radio para los elementos
+            android:color -> color del fondo del elemento
+
+            android:width -> ancho del interior del elemento
+            android:height -> alto del interior del elemento
+
+            android:width -> ancho del borde del elemento
+            android:color -> color del borde del elemento
+
+            android:top -> margen superior del elemento
+            android:bottom -> margen inferior del elemento
+            android:left -> margen izquierdo del elemento
+            android:right -> margen derecho del elemento
+
+-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/white" />
+
+    <size android:width="50dp"
+        android:height="50dp" />
+
+    <stroke android:width="3dp"
+        android:color="@color/black" />
+
+    <padding android:top="2dp"
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="4dp" />
+</shape>

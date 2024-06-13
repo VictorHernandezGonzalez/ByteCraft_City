@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    RelativeLayout del diseño total de los SplashScreen de la app
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        android:layout_width -> ancho del elemento
+        android:layout_height -> alto del elemento
+        android:background -> color del fondo del diseño
+        android:orientation -> orientación de el elemento
+
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundSplash"
+    android:orientation="vertical">
+
+    <!--    ImageView de la imagen del logo de la app
+
+            android:id -> id de referencia
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_marginStart -> margen izquierdo del elemento
+            android:layout_marginTop -> margen superior del elemento
+            android:layout_marginEnd -> margen derecho del elemento
+            android:layout_marginBottom -> margen inferior del elemento
+            android:background -> fondo de borde del elemento
+            android:padding -> espaciado del elemento
+            android:src -> inserccion de imagen
+
+    -->
+
+    <ImageView
+        android:id="@+id/imageViewLogoInicio"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/roundcorner"
+        android:contentDescription="@null"
+        android:padding="40dp"
+        android:src="@drawable/logo" />
+
+    <!--    ProgressBar de los SplashScreen la app
+
+            android:id -> id de referencia
+            style -> estilo del elemento
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:layout_marginStart -> margen izquierdo del elemento
+            android:layout_marginTop -> margen superior del elemento
+            android:layout_marginEnd -> margen derecho del elemento
+            android:indeterminate -> duracion de la animacion
+            android:max -> maximo del progreso del elemento
+            android:progressDrawable -> animacion del progreso del elemento
+
+    -->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="280dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="70dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progressDrawable="@drawable/custom_progress_bar"/>
+</RelativeLayout>

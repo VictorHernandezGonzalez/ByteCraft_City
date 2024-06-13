@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    Radio del borde de los diferentes elementos de los layout para la seleccion de partida
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        android:shape -> forma del radio para los elementos
+            android:width -> ancho del elemento
+            android:color -> color del elemento
+
+-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="2dp"
+        android:color="@color/colorBotonesLogin"/> <!-- Cambia este color al que desees -->
+</shape>

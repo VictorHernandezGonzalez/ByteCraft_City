@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    ProgressBar para los Splash Screen de la app
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        android:id -> id del color del elemento sin carga
+            android:color -> color de la barra sin carga
+        android:id -> id del color del elemento cargado
+            android:color -> color de la barra cargada
+
+-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="@color/background" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

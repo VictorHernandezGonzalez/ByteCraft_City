@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    Radio del borde de los diferentes elementos de los layout
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        android:color -> color del elemento
+            android:width -> ancho del elemento
+            android:color -> color del borde del elemento
+            android:radius -> tamaño del radio del elemento
+
+-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/backgroundSplash" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/backgroundToast" />
+    <corners android:radius="20dp" />
+</shape>

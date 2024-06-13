@@ -1,0 +1,42 @@
+<resources>
+    <!-- String principal de la aplicación -->
+    <string name="app_name">ByteCraft City</string>
+
+    <!-- Strings de activity_login -->
+    <string name="textoLogin">Bienvenido Jugador. Introduzca sus datos para empezar su aventura… </string>
+    <string name="E_mail">E-mail</string>
+    <string name="password">Contraseña</string>
+    <string name="registrar">REGISTRARSE</string>
+    <string name="inicioSesion">INICIAR SESIÓN</string>
+
+    <string name="default_web_client_id" translatable="false">661159785135-oa9f0dem00qv6egfj5la953gq1488db1.apps.googleusercontent.com</string>
+
+    <!-- Strings de activity_registro -->
+    <string name="textoRegistro">Introduzca los datos requeridos para el registro de su jugador: </string>
+    <string name="email">E-mail:</string>
+    <string name="nombre">Nombre:</string>
+    <string name="contrasena">Contraseña:</string>
+    <string name="repeatPassword">Repetir contraseña:</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="confirmar">CONFIRMAR</string>
+
+    <!-- Strings de activity_seleccion_partida -->
+    <string name="p1Texto">Cree, cargue o borre la partida para comenzar</string>
+    <string name="recursos">Recursos Disponibles</string>
+    <string name="crearP">CREAR PARTIDA</string>
+    <string name="cargarP">CARGAR PARTIDA</string>
+    <string name="borrarP">BORRAR PARTIDA</string>
+    <string name="textoDefault">x0</string>
+
+    <!-- Strings de activity_juego_principal -->
+    <string name="madera">0</string>
+    <string name="piedra">0</string>
+    <string name="hierro">0</string>
+    <string name="oro">0</string>
+    <string name="guardarP">GUARDAR PARTIDA</string>
+    <string name="salirP">SALIR DE LA PARTIDA</string>
+    <string name="cancelarP">CANCELAR</string>
+    <string name="textoImageButton"> </string>
+    <string name="poblacion">0</string>
+    <string name="temporizador">00:00</string>
+</resources>

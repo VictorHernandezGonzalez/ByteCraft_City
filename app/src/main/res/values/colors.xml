@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores de la aplicación -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundToast">#064188</color>
+    <color name="backgroundSplash">#2F6AB3</color>
+    <color name="background">#082947</color>
+    <color name="colorBotonesLogin">#0F5493</color>
+</resources>

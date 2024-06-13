@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    CardView del diseño de los CustomToast de la app
+
+        xmlns:android="http://schemas.android.com/apk/res/android" -> importa las configuraciones de android para Android Studio
+        xmlns:card_view="http://schemas.android.com/apk/res-auto" -> importa las configuraciones de card_view para Android Studio
+        android:layout_width -> ancho del elemento
+        android:layout_height -> alto del elemento
+        android:layout_margin -> margen total del elemento
+        android:orientation -> orientación de el elemento
+        card_view:cardCornerRadius -> redondeo del borde del CardView
+
+-->
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_margin="20dp"
+    android:orientation="horizontal"
+    card_view:cardCornerRadius="10dp">
+
+    <!--    LinearLayout del diseño que contiene los CustomToast de la app
+
+            android:layout_width -> ancho del elemento
+            android:layout_height -> alto del elemento
+            android:background -> color del fondo del diseño
+            android:orientation -> orientación de el elemento
+
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/backgroundToast"
+        android:orientation="horizontal">
+
+        <!--    ImageView de la imagen del logo de la app
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_marginStart -> margen izquierdo del elemento
+                android:layout_marginEnd -> margen derecho del elemento
+                android:layout_marginTop -> margen superior del elemento
+                android:padding -> espaciado del elemento
+                android:background -> fondo de borde del elemento
+                android:src -> inserccion de imagen
+
+        -->
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            android:padding="11dp"
+            android:background="@drawable/roundcorner"
+            android:src="@drawable/logo"/>
+
+        <!--    TextView que contiene el mensaje de los CustomToast
+
+                android:id -> id de referencia
+                android:layout_width -> ancho del elemento
+                android:layout_height -> alto del elemento
+                android:layout_marginStart -> margen izquierdo del elemento
+                android:layout_marginEnd -> margen derecho del elemento
+                android:layout_marginTop -> margen superior del elemento
+                android:gravity -> gravedad del texto del elemento
+                android:textColor -> color del texto del elemento
+
+        -->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
