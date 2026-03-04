@@ -20,28 +20,32 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Objects;
 
-public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class LoginActivity extends AppCompatActivity {
 
     // Declaración de variables
     private FirebaseAuth auth;
-    private GoogleApiClient googleApiClient;
 
     private EditText editTextEmail;
     private EditText editTextContrasenaRegistro;
 
     private MediaPlayer mp; // Declaración de un reproductor de música
+
+    // Cliente de Google para Sign-In
+    private GoogleSignInClient googleSignInClient;
+
+    // Código de solicitud para iniciar sesión con Google
+    private static final int RC_SIGN_IN = 9001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,10 +89,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             // Verificación de que todos los campos no estén vacíos
             if (email.trim().isEmpty() || password.trim().isEmpty()) {
                 showCustomToast(R.drawable.logo, "Todos los campos son obligatorios");
-            // Verificación de que el E-mail tenga el formato correcto
+                // Verificación de que el E-mail tenga el formato correcto
             } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 showCustomToast(R.drawable.logo, "Formato de correo electrónico inválido");
-            //  Verificación de que la contraseña tenga los caracteres necesarios
+                //  Verificación de que la contraseña tenga los caracteres necesarios
             } else if (password.length() < 8 || !validarFormatoContrasena(password)) {
                 showCustomToast(R.drawable.logo, "Contraseña incorrecta");
             } else {
@@ -125,28 +129,19 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .requestEmail()
                 .build();
 
-        // Configuración de la API para iniciar sesión con Google
-        googleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this, this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-                .build();
+        googleSignInClient = GoogleSignIn.getClient(this, gso);
 
         // Botón para iniciar sesión con Google
-        signInButtonGoogle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+        signInButtonGoogle.setOnClickListener(v -> {
+            // Cerramos sesión para que siempre salga el selector de cuentas
+            googleSignInClient.signOut().addOnCompleteListener(task -> {
+                Intent signInIntent = googleSignInClient.getSignInIntent();
                 startActivityForResult(signInIntent, RC_SIGN_IN);
-            }
+            });
         });
 
         // Imagen clicable para mostrar la contraseña del Login
-        imageButtonOjoConContrasenaLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mostrarContrasenaTemporalmente(editTextContrasenaRegistro);
-            }
-        });
+        imageButtonOjoConContrasenaLogin.setOnClickListener(v -> mostrarContrasenaTemporalmente(editTextContrasenaRegistro));
     }
 
     // Función para mostrar la contraseña del Login temporalmente
@@ -187,8 +182,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == RC_SIGN_IN) {
-            if (data != null) { // Verificar que data no sea nulo
-                GoogleSignInAccount account = Objects.requireNonNull(Auth.GoogleSignInApi.getSignInResultFromIntent(data)).getSignInAccount();
+            if (data != null) {
+                GoogleSignInAccount account = GoogleSignIn.getSignedInAccountFromIntent(data).getResult();
                 if (account != null) {
                     firebaseAuthWithGoogle(account);
                 } else {
@@ -211,15 +206,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                         startActivity(intent);
                         finish();
                     } else {
-                        showCustomToast(R.drawable.logo, "Error al iniciar sesión con Google: " + Objects.requireNonNull(task.getException()).getMessage());
+                        showCustomToast(R.drawable.logo, "Error al iniciar sesión con Google: " +
+                                Objects.requireNonNull(task.getException()).getMessage());
                     }
                 });
-    }
-
-    // Manejo de conexión fallida con la API de Google
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        showCustomToast(R.drawable.logo, "Error de conexión con Google: " + connectionResult.getErrorMessage());
     }
 
     // Función para la validación del formato de la contraseña
@@ -254,7 +244,4 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         toast.setView(layout);
         toast.show();
     }
-
-    // Código de solicitud para iniciar sesión con Google
-    private static final int RC_SIGN_IN = 9001;
 }

@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.bytecraft_city'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.bytecraft_city"
         minSdk 24
-        targetSdk 33
+        targetSdk 36
         versionCode 1
         versionName "1.0"
 
@@ -23,36 +23,43 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    // Core y UI
+    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("com.google.android.material:material:1.13.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+    implementation("androidx.core:core-splashscreen:1.2.0")
 
-    //API SplashScreen
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    // Firebase BoM y KTX (Firestore + Auth + Analytics)
+    implementation platform('com.google.firebase:firebase-bom:32.2.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
-    //Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
-    implementation("com.google.firebase:firebase-auth-ktx:23.0.0")
-    implementation("com.google.firebase:firebase-auth:23.0.0")
-    implementation("com.google.firebase:firebase-core:21.1.1")
+    // Google Sign-In
+    implementation 'com.google.android.gms:play-services-auth:21.5.0'
 
-    //Firebase Google
-    implementation("com.google.android.gms:play-services-auth:21.2.0")
+    // DataStore Preferences necesario para Firestore moderno
+    implementation "androidx.datastore:datastore-preferences:1.2.0"
 
-    //Firestore
-    implementation 'com.google.firebase:firebase-firestore:25.0.0'
-    implementation 'com.google.firebase:firebase-database:21.0.0'
-
+    // Test
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.ext:junit:1.3.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
+
+    // Google services plugin
+    apply plugin: 'com.google.gms.google-services'
 }
